@@ -10,7 +10,7 @@ function Home() {
       </h1>
       <h2 className="text-2xl flex items-center">I'm a Computer Science student at the University of Alberta</h2>
       <h2 className="text-lg flex items-center">
-        I'm a self-taught software developer with experience building multiple user-driven interactive bots which gained
+        I'm a software developer with experience building multiple user-driven interactive bots which gained
         stable user bases in multiple online communities and designed websites for other gaming communities to interact
         with each other.
       </h2>
