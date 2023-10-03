@@ -1,25 +1,42 @@
-import { HiHome, HiOutlineDesktopComputer, HiOutlineMail, HiDocumentText } from 'react-icons/hi';
-import { Link, useNavigate } from 'react-router-dom'; // Import Link and useNavigate
+import { HiHome, HiOutlineDesktopComputer, HiDocumentText, HiCheck } from 'react-icons/hi';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 function Sidebar() {
-    const navigate = useNavigate(); // Get the navigate function from React Router
+    const [open, setOpen] = useState(false);
+    const Menus = [
+        { title: "Home", icon: <HiHome size="50" />, link: "/" },
+        { title: "Projects", icon: <HiOutlineDesktopComputer size="45" />, link: "/projects" },
+        { title: "Skills", icon: <HiCheck size="50" />, link: "/skills" },
+        { title: "Resume", icon: <HiDocumentText size="50" />, link: "/resume" },
+    ];
 
     return (
-        <div className="fixed top-0 h-screen w-20 m-0 flex flex-col bg-secondary text-white shadow">
-            {/* Use Link components to navigate to different routes */}
-            <SideBarIcon icon={<HiHome size="50" />} onClick={() => navigate('/')} />
-            <SideBarIcon icon={<HiOutlineDesktopComputer size="45" />} onClick={() => navigate('/projects')} />
-            <SideBarIcon icon={<HiOutlineMail size="50" />} onClick={() => navigate('/contact')} />
-            <SideBarIcon icon={<HiDocumentText size="50" />} onClick={() => navigate('/resume')} />
+        <div className="fixed top-0 left-0 h-screen z-50 flex" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
+            <div className={` ${open ? "w-64" : "w-20 "} bg-secondary/70 h-screen relative duration-300`}>
+                <ul className="pt-6 justify-content-center">
+                    {Menus.map((Menu, index) => (
+                        <li key={index} className={`flex items-center group hover:bg-button_primary`}>
+                            <span>
+                                <SideBarIcon link={Menu.link} icon={Menu.icon} title={Menu.title} open={open} />
+                            </span>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
     );
-}
+};
 
-const SideBarIcon = ({ icon, onClick }) => (
-    <button className="sidebar-icon" onClick={onClick}>
-        {icon}
-    </button>
+const SideBarIcon = ({link, icon, title, open }) => (
+    <Link to={link}>
+        <div className={`w-64 flex items-center ${!open || "w-20"}`}>
+            <button className="sidebar-icon ml-1.5">
+                {icon}
+            </button>
+            <span className={`ml-3 text-base font-medium text-primary group-hover:text-secondary duration-200 ${open ? "translate-x-0" : "-translate-x-50 opacity-0"}`}>{title}</span>
+        </div>
+    </Link>
 );
-
 
 export default Sidebar;
