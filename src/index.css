@@ -9,8 +9,8 @@ body{
 @layer components{
     .sidebar-icon {
         @apply relative flex items-center justify-center 
-               h-16 w-16 text-primary mt-1 mb-1
+               h-16 w-16 text-primary max-sm:ml-4 sm:mt-1 sm:mb-1
                group-hover:text-secondary rounded-2xl hover:rounded-xl
-               transition-all duration-200 ease-linear;
+               transition-all duration-100 ease-linear;
     }
 }
