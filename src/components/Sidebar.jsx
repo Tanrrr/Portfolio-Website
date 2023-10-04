@@ -16,7 +16,7 @@ function Sidebar() {
             <div className={` ${open ? "w-64" : "w-20 "} bg-secondary/50 max-sm:w-screen sm:h-screen sm:duration-100`}>
                 <ul className="pt-6 md:justify-content-center max-sm:items-center max-sm:h-20 max-sm:max-sm:flex max-sm:inline-flex">
                     {Menus.map((Menu, index) => (
-                        <li key={index} className={`flex items-center group md:hover:bg-button_primary`}>
+                        <li key={index} className={`flex items-center group sm:hover:bg-button_primary`}>
                             <span>
                                 <SideBarIcon link={Menu.link} icon={Menu.icon} title={Menu.title} open={open} />
                             </span>
@@ -30,7 +30,7 @@ function Sidebar() {
 
 const SideBarIcon = ({link, icon, title, open }) => (
     <Link to={link}>
-        <div className={`max-sm:ml-1.5 max-sm:mb-5 max-sm:w-20 md:w-64 flex items-center md:${!open || "w-20"}`}>
+        <div className={`max-sm:ml-1.5 max-sm:mb-5 max-sm:w-20 sm:w-64 flex items-center md:${!open || "w-20"}`}>
             <button className="sidebar-icon min-sm:ml-1.5">
                 {icon}
             </button>
