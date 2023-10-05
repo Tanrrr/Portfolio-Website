@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="flex">
     <BrowserRouter>
-    <div class="transition-width"><Sidebar/></div>
+      <div class=" sticky transition-width max-sm:pb-16 sm:pl-20"><Sidebar/></div>
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
