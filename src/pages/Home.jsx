@@ -1,6 +1,6 @@
 import React from 'react';
 import me from '../images/me.jpg';
-import {AiFillGithub} from 'react-icons/ai';
+import {FiGithub, FiLinkedin, FiMail} from 'react-icons/fi';
 
 function Home() {
   return (
@@ -14,18 +14,38 @@ function Home() {
         </h1>
         <h2 className="text-2xl flex">Computer Science at University of Alberta</h2>
       </div>
-      <main className="mx-auto items-center pt-12 w-3/6 lg:pt-10">
+      <main className="mx-auto items-center pt-8 max-sm:w-5/6 max-md:w-3/4 md:w-4/6 lg:pt-10">
         <h2 className="text-lg flex">
-          I'm a software developer with experience building multiple user-driven interactive bots which gained
+          I'm a Software Developer with experience building multiple user-driven interactive bots which gained
           stable user bases in multiple online communities and designed websites for other gaming communities to interact
           with each other.
         </h2>
       </main>
-      <ul className="ml-1 mt-8 flex items-center">
-        <li className="mr-6">
-          
-        </li>
-      </ul>
+      <div className='pt-10'>
+        <ul className="m-0 flex items-center">
+          <li className="mr-5">
+            <a className="text-secondary hover:text-button_small duration-150" href="https://github.com/Tanrrr">
+              <svg width="50px" height="50px">
+                <FiGithub size="50" />
+              </svg>
+            </a>
+          </li>
+          <li className="mr-5">
+            <a className="text-secondary hover:text-button_small duration-150" href="https://www.linkedin.com/in/tanner-bronson-04399b238/">
+              <svg width="50px" height="50px">
+                <FiLinkedin size="50" />
+              </svg>
+            </a>
+          </li>
+          <li className="mr-5">
+            <a className="text-secondary hover:text-button_small duration-150" href="mailto:tanrrrbronson@gmail.com">
+              <svg width="50px" height="50px">
+                <FiMail size="50" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
