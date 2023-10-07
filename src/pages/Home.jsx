@@ -10,7 +10,7 @@ function Home() {
           <img className="rounded-3xl transition-all ease-linear max-w-full mt-2 mb-2" src={me} alt="me" width={300} height={300} />
         </div>
         <h1 className="font-bold text-4xl mb-2 hover:scale-105 transition-all ease-linear">
-          <button><div className="text-4xl font-bold tracking-tight sm:text-5xl flex items-center rounded-md px-3 py-1 leading- bg-secondary/10 text-secondary">Tanner Bronson</div></button>
+          <button><div className="text-4xl font-bold tracking-tight sm:text-5xl flex items-center rounded-md px-3 py-1 leading- bg-secondary/10 text-secondary hover:text-button_small duration-300">Tanner Bronson</div></button>
         </h1>
         <h2 className="text-2xl flex">Computer Science at University of Alberta</h2>
       </div>
