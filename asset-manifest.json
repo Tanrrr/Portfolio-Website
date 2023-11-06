@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/tanrrr.github.io/Portfolio-Website/static/css/main.25619208.css",
+    "main.js": "/tanrrr.github.io/Portfolio-Website/static/js/main.6d9ccae1.js",
+    "static/media/resume.pdf": "/tanrrr.github.io/Portfolio-Website/static/media/resume.0e8b9213e090239980e7.pdf",
+    "static/media/me.jpg": "/tanrrr.github.io/Portfolio-Website/static/media/me.a4ba8d0edd926c913b85.jpg",
+    "index.html": "/tanrrr.github.io/Portfolio-Website/index.html",
+    "main.25619208.css.map": "/tanrrr.github.io/Portfolio-Website/static/css/main.25619208.css.map",
+    "main.6d9ccae1.js.map": "/tanrrr.github.io/Portfolio-Website/static/js/main.6d9ccae1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.25619208.css",
+    "static/js/main.6d9ccae1.js"
+  ]
+}
