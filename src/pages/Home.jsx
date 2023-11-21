@@ -4,7 +4,7 @@ import {FiGithub, FiLinkedin, FiMail} from 'react-icons/fi';
 
 function Home() {
   return (
-    <div className='flex flex-col items-center mx-auto min-h-screen w-screen max-w-screen-xl font-sans py-20'>
+    <div className='flex flex-col items-center mx-auto w-screen max-w-screen-xl h-screen font-sans pt-20'>
       <div className="w-3/4 flex flex-col items-center justify-center">
         <div className="mb-4 px-4 flex md:justify-start">
           <img className="rounded-3xl transition-all ease-linear max-w-full mt-2 mb-2" src={me} alt="me" width={300} height={300} />
@@ -46,6 +46,7 @@ function Home() {
           </li>
         </ul>
       </div>
+      <footer className='w-screen bg-bgimg h-2/3 bg-cover'></footer>
     </div>
   );
 }
