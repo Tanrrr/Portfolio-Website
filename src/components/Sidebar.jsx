@@ -6,8 +6,8 @@ function Sidebar() {
     const [open, setOpen] = useState(false);
     const Menus = [
         { title: "Home", icon: <FiHome size="50" />, link: "/" },
-        { title: "Projects", icon: <FiLayers size="45" />, link: "/projects" },
-        { title: "Skills", icon: <FiCheck size="50" />, link: "/skills" },
+        //{ title: "Projects", icon: <FiLayers size="45" />, link: "/projects" },
+        //{ title: "Skills", icon: <FiCheck size="50" />, link: "/skills" },
         { title: "Resume", icon: <FiFileText size="50" />, link: "/resume" },
     ];
 

@@ -11,6 +11,9 @@ module.exports = {
         button_primary: '#E6D6FA',
         button_small: '#70587C',
       },
+      backgroundImage: {
+        'bgimg': 'url("./images/layered-waves-haikei (2).svg")',
+      },
       variants: {
         extend: {
           backgroundColor: ['active'], // Enable active variant for backgroundColor
