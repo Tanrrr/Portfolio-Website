@@ -6,7 +6,7 @@ function Resume() {
       <div className='flex flex-col items-center mx-auto min-h-screen w-screen max-w-screen-xl font-sans max-sm:py-20 sm:py-10'>
         <div aria-label='paper' className="w-2/3 h-full">
           <h1 className="text-4xl font-bold">Tanner Bronson</h1>
-          <h2 className=" mb-1">Software Engineer | <a href={resumepdf} className="text-blue-900">PDF Version of Resume</a></h2>
+          <h2 className=" mb-1">Software Developer | <a href={resumepdf} className="text-blue-900">PDF Version of Resume</a></h2>
           <h2>Edmonton, Alberta (Open to Remote) | +1 (780-966-0954) | <a href='mailto:tanrrrbronson@gmail.com' className="text-blue-900">tanrrrbronson@gmail.com</a></h2>
           <h2 className="my-2 font-bold text-lg">EDUCATION</h2>
           <hr className="bg-black my-1"/>
