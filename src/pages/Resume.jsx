@@ -12,7 +12,7 @@ function Resume() {
           <hr className="bg-black my-1"/>
           <div className="flex my-1 ml-4">
             <h2 className="font-bold">University of Alberta - Computer Science</h2>
-            <h2 className="font-bold ml-auto">Apr 2025</h2>
+            <h2 className="font-bold ml-auto">Apr 2026</h2>
           </div>
           <h2 className="my-2 font-bold text-lg">SKILLS</h2>
           <hr className="bg-black my-1"/>
@@ -33,8 +33,23 @@ function Resume() {
           <h2 className="my-2 font-bold text-lg">PERSONAL PROJECTS</h2>
           <hr className="bg-black my-1"/>
           <div className="flex my-1 ml-4">
+            <h2 className="font-bold">Untitled Shooter Game Project – Unity Engine</h2>
+            <h2 className="font-bold ml-auto">May 2024 – June 2024</h2>
+          </div>
+          <ul className="my-1 ml-12 list-disc">
+            <li>
+              Developed a fast-paced, Quake-style first-person shooter game using Unity, focusing on speed and accuracy in gameplay.
+            </li>
+            <li>
+            Led the design and implementation of core game mechanics, emphasizing smooth, high-speed gameplay and precise shooting.
+            </li>
+            <li>
+            Integrated real-time multiplayer features using Unity's networking tools to enable networked player interactions while maintaining the game's fast pace and responsiveness.
+            </li>
+          </ul>
+          <div className="flex my-1 ml-4">
             <h2 className="font-bold">Portfolio Website – JavaScript, React, Tailwind</h2>
-            <h2 className="font-bold ml-auto">Sep 2023 – Present</h2>
+            <h2 className="font-bold ml-auto">Sep 2023 – Oct 2023</h2>
           </div>
           <ul className="my-1 ml-12 list-disc">
             <li>
