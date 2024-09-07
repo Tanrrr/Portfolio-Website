@@ -12,7 +12,7 @@ module.exports = {
         button_small: '#70587C',
       },
       backgroundImage: {
-        'bgimg': 'url("./images/layered-waves-haikei (2).svg")',
+        'bgimg': 'url("./images/magicpattern-grid-pattern-1725681629758.png")',
       },
       variants: {
         extend: {
@@ -23,6 +23,8 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ],
 }
 
