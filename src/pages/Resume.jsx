@@ -48,6 +48,24 @@ function Resume() {
             </li>
           </ul>
           <div className="flex my-1 ml-4">
+            <h2 className="font-bold">Kana Bot – Python, MySQL, discord.py</h2>
+            <h2 className="font-bold ml-auto">Mar 2024 – May 2024</h2>
+          </div>
+          <ul className="my-1 ml-12 list-disc">
+            <li>
+              Developed a Discord bot using the discord.py library, which enabled users to create profiles and
+              store currency through a MySQL database.  
+            </li>
+            <li>
+            Implemented features that allowed users to trade
+              and gamble currency for in-game items.
+            </li>
+            <li>
+            The bot was successfully deployed on multiple Discord
+              servers and had an active userbase of 100+ individuals interacting with it concurrently
+            </li>
+          </ul>
+          <div className="flex my-1 ml-4">
             <h2 className="font-bold">Portfolio Website – JavaScript, React, Tailwind</h2>
             <h2 className="font-bold ml-auto">Sep 2023 – Oct 2023</h2>
           </div>
@@ -77,25 +95,7 @@ function Resume() {
             </li>
           </ul>
           <div className="flex my-1 ml-4">
-            <h2 className="font-bold">Kana Bot – Python, MySQL, discord.py</h2>
-            <h2 className="font-bold ml-auto">Mar 2021 – May 2022</h2>
-          </div>
-          <ul className="my-1 ml-12 list-disc">
-            <li>
-              Developed a Discord bot using the discord.py library, which enabled users to create profiles and
-              store currency through a MySQL database.  
-            </li>
-            <li>
-            Implemented features that allowed users to trade
-              and gamble currency for in-game items.
-            </li>
-            <li>
-            The bot was successfully deployed on multiple Discord
-              servers and had an active userbase of 100+ individuals interacting with it concurrently
-            </li>
-          </ul>
-          <div className="flex my-1 ml-4">
-            <h2 className="font-bold mr-4">Game Update Notifier – Selenium, Python, MySQL</h2>
+            <h2 className="font-bold mr-4">Roblox Game Update Notifier – Selenium, Python, MySQL</h2>
             <h2 className="font-bold ml-auto">Nov 2021 – Mar 2022</h2>
           </div>
           <ul className="my-1 ml-12 list-disc">
