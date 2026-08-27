@@ -2,12 +2,104 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html, body, #root {
+    min-height: 100%;
+  }
 
-@layer components{
-    .sidebar-icon {
-        @apply relative flex items-center justify-center 
-               h-16 w-16 text-primary sm:mt-1 sm:mb-1
-               sm:group-hover:text-button_small rounded-2xl max-sm:hover:text-button_small hover:rounded-xl
-               transition-all duration-150 ease-linear;
-    }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #0a0a0f;
+    color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 1.2rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.06);
+  }
+
+  .btn-accent {
+    @apply relative overflow-hidden font-semibold rounded-2xl px-6 py-3 no-underline inline-block;
+    color: #0a0a0f;
+    background: #00d4ff;
+    box-shadow: 0 4px 20px rgba(0,212,255,0.35);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+
+  .btn-accent:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 28px rgba(0,212,255,0.5);
+  }
+
+  .btn-outline {
+    @apply relative overflow-hidden font-semibold rounded-2xl px-6 py-3 no-underline inline-block;
+    color: #f5f7fa;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.20);
+    transition: transform 0.15s, background 0.15s;
+  }
+
+  .btn-outline:hover {
+    transform: translateY(-1px);
+    background: rgba(255,255,255,0.08);
+  }
+
+  .tag {
+    @apply text-xs font-semibold px-2.5 py-0.5 rounded-full inline-block;
+    background: rgba(0,212,255,0.10);
+    border: 1px solid rgba(0,212,255,0.30);
+    color: #00d4ff;
+  }
+
+  .glass-input {
+    @apply w-full rounded-xl px-3.5 py-2.5 text-sm outline-none;
+    color: #f5f7fa;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.15);
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .glass-input::placeholder {
+    color: rgba(245,247,250,0.35);
+  }
+
+  .glass-input:focus {
+    border-color: rgba(0,212,255,0.6);
+    box-shadow: 0 0 0 2px rgba(0,212,255,0.18);
+  }
+
+  .heading-accent {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    background: linear-gradient(135deg, #f5f7fa 0%, #00d4ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.04);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0,212,255,0.35);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0,212,255,0.5);
 }
