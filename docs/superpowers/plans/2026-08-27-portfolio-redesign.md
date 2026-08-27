@@ -18,7 +18,7 @@
 - Headline font: Space Grotesk (Google Fonts). Body font: Inter.
 - No new dependencies. Remove `7.css` and `react-router-dom` (both tied to the retired desktop concept).
 - Single-page site, anchor-link navigation only — no client-side routing.
-- No automated test suite is added. Verification is `yarn build`/`yarn start` plus manual browser check at each task, per the spec's stated testing bar (a presentational site with no business logic to unit test).
+- No automated test suite is added. Verification is `npm run build`/`npm start` plus manual browser check at each task, per the spec's stated testing bar (a presentational site with no business logic to unit test).
 - IceIQ live URL: `https://fantasy.tannerbronson.ca`. IceIQ's repository stays **private** — it's a planned future SaaS product — so its case study links only to the live site, with no GitHub link.
 - lottery20 and ChadGPT have no public GitHub repo yet — the owner will push `github.com/Tanrrr/lottery20` and `github.com/Tanrrr/ChadGPT` before launch. The plan links to those URLs on the assumption they'll exist by then.
 
@@ -55,7 +55,7 @@ rm -rf public/music src/images/album
 - [ ] **Step 3: Remove the desktop-only dependencies**
 
 ```bash
-yarn remove 7.css react-router-dom
+npm uninstall 7.css react-router-dom
 ```
 
 - [ ] **Step 4: Replace App.jsx with a placeholder**
@@ -68,7 +68,7 @@ export default function App() {
 
 - [ ] **Step 5: Verify the build still succeeds**
 
-Run: `yarn build`
+Run: `npm run build`
 Expected: build completes with no errors (CRA's default warnings, if any, are fine — there should be no "Module not found" errors referencing any deleted file).
 
 - [ ] **Step 6: Commit**
@@ -293,7 +293,7 @@ export default function App() {
 
 - [ ] **Step 6: Verify visually**
 
-Run: `yarn start`, open `http://localhost:3000`.
+Run: `npm start`, open `http://localhost:3000`.
 Expected: near-black background, "Tanner Bronson" heading in Space Grotesk with a white-to-cyan gradient fill. No console errors.
 
 - [ ] **Step 7: Commit**
@@ -425,7 +425,7 @@ export default function App() {
 
 - [ ] **Step 3: Verify visually**
 
-Run: `yarn start`.
+Run: `npm start`.
 Expected: a floating glass nav bar at the top with the logo and five links (Featured, Projects, Experience, About, Contact). Nothing scrolls anywhere useful yet (target sections don't exist) — that's expected at this point. No console errors. Narrow the browser window and confirm the link row scrolls horizontally without wrapping or overflowing the page.
 
 - [ ] **Step 4: Commit**
@@ -570,7 +570,7 @@ export default function App() {
 
 - [ ] **Step 3: Verify visually**
 
-Run: `yarn start`.
+Run: `npm start`.
 Expected: full-height hero with headshot, name, title, pitch, three CTA buttons, and social icons, with two soft glowing blobs drifting slowly behind it. "View My Work" and "Get in Touch" don't scroll anywhere yet (targets don't exist) — expected at this point. "Download Resume" should download the PDF immediately. No console errors.
 
 - [ ] **Step 4: Commit**
@@ -721,7 +721,7 @@ export default function App() {
 
 - [ ] **Step 4: Verify visually**
 
-Run: `yarn start`, scroll down or click "Featured" in the nav.
+Run: `npm start`, scroll down or click "Featured" in the nav.
 Expected: the IceIQ case study renders with description, three metrics (100+, $0, Playwright E2E), stack tags, and one working link ("View Live Site" opens `fantasy.tannerbronson.ca`) — no GitHub link. Nav highlights "Featured" while this section is in view.
 
 - [ ] **Step 5: Commit**
@@ -836,7 +836,7 @@ export default function App() {
 
 - [ ] **Step 4: Verify visually**
 
-Run: `yarn start`, click "Projects" in the nav.
+Run: `npm start`, click "Projects" in the nav.
 Expected: three glass cards (lottery20, fantasytracker, ChadGPT) fade up on scroll, each with stack tags and a GitHub link. Cards lift slightly on hover. GitHub links for lottery20/ChadGPT will 404 until those repos are pushed — expected per the plan's constraints.
 
 - [ ] **Step 5: Commit**
@@ -919,7 +919,7 @@ export default function App() {
 
 - [ ] **Step 3: Verify visually**
 
-Run: `yarn start`, click "Experience" in the nav.
+Run: `npm start`, click "Experience" in the nav.
 Expected: a glass card with a cyan left accent bar, "Software Engineer Intern — Amazon", dates, and three bullet highlights.
 
 - [ ] **Step 4: Commit**
@@ -1012,7 +1012,7 @@ export default function App() {
 
 - [ ] **Step 3: Verify visually**
 
-Run: `yarn start`, click "About" in the nav.
+Run: `npm start`, click "About" in the nav.
 Expected: bio + education line in one card, three skill-category cards below it (Languages, Frameworks, Databases & Tools) with tag pills.
 
 - [ ] **Step 4: Commit**
@@ -1194,7 +1194,7 @@ export default function App() {
 
 - [ ] **Step 3: Verify visually**
 
-Run: `yarn start`, click "Contact" in the nav.
+Run: `npm start`, click "Contact" in the nav.
 Expected: a form card (name/email/subject/message, styled to the dark theme) and a "Let's connect" card with social links, plus a copyright footer line. Fill out the form and submit — expect either a success message or a clear error message (network-dependent; the point is the request fires and the UI reflects the result, not that delivery is guaranteed in this check).
 
 - [ ] **Step 4: Commit**
@@ -1216,12 +1216,12 @@ git commit -m "feat: add contact section and footer"
 
 - [ ] **Step 1: Production build check**
 
-Run: `yarn build`
+Run: `npm run build`
 Expected: builds cleanly with no errors.
 
 - [ ] **Step 2: Full manual walkthrough**
 
-Run: `yarn start`, then in the browser:
+Run: `npm start`, then in the browser:
 - Scroll top to bottom once without clicking the nav — confirm every section appears in order (Hero → IceIQ → Projects → Experience → About → Contact) with no layout breaks or overlapping content.
 - Click every nav link — confirm each scrolls to the correct section and the nav highlights it.
 - Resize the browser to a narrow (mobile) width — confirm the nav link row scrolls horizontally instead of wrapping/breaking, the hero stacks to a single column, and the project/skill grids collapse to one column.
