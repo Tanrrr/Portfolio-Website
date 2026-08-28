@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import GlassCard from '../components/GlassCard';
+import resumePdf from '../images/resume.pdf';
 
 const FIELDS = [
   { id: 'name', label: 'Name', type: 'text' },
@@ -77,7 +78,8 @@ export default function Contact() {
 
             <motion.button
               type="submit"
-              className="btn-accent mt-2"
+              disabled={status.type === 'loading'}
+              className="btn-accent mt-2 disabled:opacity-60 disabled:cursor-not-allowed"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
             >
@@ -117,6 +119,14 @@ export default function Contact() {
               </a>
             ))}
           </div>
+
+          <a
+            href={resumePdf}
+            download="Tanner_Bronson_Resume.pdf"
+            className="btn-outline inline-block mt-6"
+          >
+            Download Resume
+          </a>
         </GlassCard>
       </div>
 

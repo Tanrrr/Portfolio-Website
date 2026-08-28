@@ -5,6 +5,8 @@ import { PROJECTS } from '../data/projects';
 const iceiq = PROJECTS.find(p => p.id === 'iceiq');
 
 export default function FeaturedProject() {
+  if (!iceiq) return null;
+
   return (
     <section id="iceiq" className="px-6 py-24 max-w-4xl mx-auto">
       <motion.p
