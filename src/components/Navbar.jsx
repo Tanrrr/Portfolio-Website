@@ -15,18 +15,33 @@ function useActiveSection() {
   const [active, setActive] = useState('hero');
 
   useEffect(() => {
-    const observers = SECTION_IDS.map(id => {
-      const el = document.getElementById(id);
-      if (!el) return null;
-      const observer = new IntersectionObserver(
-        ([entry]) => { if (entry.isIntersecting) setActive(id); },
-        { threshold: 0.35 }
-      );
-      observer.observe(el);
-      return observer;
-    }).filter(Boolean);
+    const ratios = new Map();
 
-    return () => observers.forEach(o => o.disconnect());
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          ratios.set(entry.target.id, entry.isIntersecting ? entry.intersectionRatio : 0);
+        });
+
+        let bestId = null;
+        let bestRatio = 0;
+        ratios.forEach((ratio, id) => {
+          if (ratio > bestRatio) {
+            bestRatio = ratio;
+            bestId = id;
+          }
+        });
+        if (bestId) setActive(bestId);
+      },
+      { threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.75, 1] }
+    );
+
+    SECTION_IDS.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   return active;
