@@ -15,14 +15,14 @@ export const PROJECTS = [
     featured: true,
   },
   {
-    id: "lottery20",
-    title: "lottery20",
+    id: "draftnight",
+    title: "DraftNight",
     tagline: "Fantasy draft lottery platform",
     description:
       "A Next.js app that runs fantasy league draft lotteries with animated ball-draw results. Supabase handles auth and data with row-level security enforcing that league members can only see and act on their own league's data, backed by a full unit, integration, and Playwright E2E test suite.",
     stack: ["Next.js", "TypeScript", "Supabase", "Playwright"],
     outcome: "Full unit/integration/E2E coverage with Supabase RLS-enforced multi-tenant security.",
-    github: "https://github.com/Tanrrr/lottery20",
+    github: "https://github.com/Tanrrr/DraftNight",
   },
   {
     id: "fantasytracker",
