@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar';
 import Hero from './pages/Hero';
 import FeaturedProject from './pages/FeaturedProject';
+import Projects from './pages/Projects';
 
 export default function App() {
   return (
@@ -8,6 +9,7 @@ export default function App() {
       <Navbar />
       <Hero />
       <FeaturedProject />
+      <Projects />
     </div>
   );
 }
