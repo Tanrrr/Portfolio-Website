@@ -26,13 +26,13 @@ export const PROJECTS = [
   },
   {
     id: "fantasytracker",
-    title: "fantasytracker",
+    title: "FantasyTracker",
     tagline: "Fantasy hockey stat visualizer",
     description:
       "A Python pipeline that pulls a season of Yahoo Fantasy Hockey data and turns it into shareable infographics — seasonal awards, stat leaderboards, and visual recaps generated automatically with pandas and matplotlib.",
     stack: ["Python", "pandas", "matplotlib", "Pillow"],
     outcome: "Automates a season's worth of league stats into ready-to-share visual recaps.",
-    github: "https://github.com/Tanrrr/FantasyHockeyTracker",
+    github: "https://github.com/Tanrrr/FantasyTracker",
   },
   {
     id: "chadgpt",
