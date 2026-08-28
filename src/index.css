@@ -7,6 +7,16 @@
     min-height: 100%;
   }
 
+  html {
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
+  }
+
+  section[id] {
+    scroll-snap-align: start;
+    scroll-margin-top: 4rem;
+  }
+
   body {
     font-family: 'Inter', system-ui, sans-serif;
     background: #0a0a0f;
