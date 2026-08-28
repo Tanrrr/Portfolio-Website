@@ -4,6 +4,7 @@ import FeaturedProject from './pages/FeaturedProject';
 import Projects from './pages/Projects';
 import Experience from './pages/Experience';
 import About from './pages/About';
+import Contact from './pages/Contact';
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <Projects />
       <Experience />
       <About />
+      <Contact />
     </div>
   );
 }
