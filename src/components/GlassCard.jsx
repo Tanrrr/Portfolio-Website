@@ -21,7 +21,7 @@ export default function GlassCard({
 }) {
   const inner = (
     <div
-      className={`glass-card glass-shine relative overflow-hidden ${className}`}
+      className={`glass-card relative overflow-hidden ${className}`}
       style={style}
     >
       {children}
@@ -32,14 +32,14 @@ export default function GlassCard({
 
   return (
     <motion.div
-      className={`glass-card glass-shine relative overflow-hidden ${className}`}
+      className={`glass-card relative overflow-hidden ${className}`}
       style={style}
       variants={fadeUpVariant}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: '-60px' }}
       transition={{ delay }}
-      whileHover={hover ? { y: -4, boxShadow: '0 16px 48px rgba(0,150,255,0.25), inset 0 1px 0 rgba(255,255,255,0.6)' } : undefined}
+      whileHover={hover ? { y: -4, boxShadow: '0 16px 48px rgba(0,212,255,0.25), inset 0 1px 0 rgba(255,255,255,0.08)' } : undefined}
     >
       {children}
     </motion.div>
