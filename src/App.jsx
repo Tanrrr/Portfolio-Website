@@ -3,6 +3,7 @@ import Hero from './pages/Hero';
 import FeaturedProject from './pages/FeaturedProject';
 import Projects from './pages/Projects';
 import Experience from './pages/Experience';
+import About from './pages/About';
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <FeaturedProject />
       <Projects />
       <Experience />
+      <About />
     </div>
   );
 }
